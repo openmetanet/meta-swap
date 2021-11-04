@@ -1,0 +1,60 @@
+$mainColor:#01BAFB;
+$grayColor:#909399;
+$blackColor:#303133;
+$whiteColor:#ffffff;
+$bgColor:#F5F7FA;
+$deepGrayColor:#606266;
+$easyGrayColor:#BFC2CC;
+$black:#000000;
+$warnColor:#FA1B1B;
+$infoColor:#26A775;
+
+@for $i from 1 through 100{
+    .mg-t#{$i}{
+        margin-top: $i*.071429rem /* 1/14 */;
+    }
+    .mg-b#{$i}{
+        margin-bottom: $i*.071429rem /* 1/14 */;
+    }
+    .mg-l#{$i}{
+        margin-left: $i*.071429rem /* 1/14 */;
+    }
+    .mg-r#{$i}{
+        margin-right: $i*.071429rem /* 1/14 */;
+    }
+}
+@for $i from 1 through 100{
+    .pd-t#{$i}{
+        padding-top: $i*.071429rem /* 1/14 */;
+    }
+    .pd-b#{$i}{
+        padding-bottom: $i*.071429rem /* 1/14 */;
+    }
+    .pd-l#{$i}{
+        padding-left: $i*.071429rem /* 1/14 */;
+    }
+    .pd-r#{$i}{
+        padding-right: $i*.071429rem /* 1/14 */;
+    }
+}
+@for $i from 1 through 50{
+    .fontSize#{$i}{
+        font-size: $i*.071429rem /* 1/14 */;
+    }
+}
+
+@mixin flex($justify:center,$direction:row,$align: center,$wrap: nowrap){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-wrap: $wrap;
+    flex-direction:$direction;  
+}
+
+@mixin border($color) {
+    border: 1px solid $color;
+  }
+
+@mixin cursor($pointer: pointer) {
+    cursor: $pointer;
+  }
